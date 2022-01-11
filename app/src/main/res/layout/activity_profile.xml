@@ -6,11 +6,47 @@
     android:layout_height="match_parent"
     tools:context=".Profile">
 
-<ImageView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/image"
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/cardview">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+        <ImageView
+
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageview"
+            android:layout_marginLeft="40dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_launcher_background"
+            android:layout_marginStart="40dp" />
+
+        <Button
+            android:id="@+id/buybutton"
+            android:layout_width="109dp"
+            android:layout_height="wrap_content"
+            android:text="Buy"
+            android:layout_marginLeft="120dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imageview"
+            />
+
+</RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:id="@+id/profileimage"
+        android:layout_centerHorizontal="true"
     android:layout_marginTop="15dp"
+        android:layout_above="@+id/name"
+        android:src="@drawable/ic_launcher_background"
     />
 
     <TextView
@@ -19,14 +55,20 @@
         android:id="@+id/name"
         android:layout_marginTop="15dp"
         android:textSize="15sp"
+        android:layout_above="@+id/mail"
+        android:layout_centerHorizontal="true"
+
+        android:text="name"
         />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/mail"
-        android:layout_below="@+id/name"
+        android:text="mail"
         android:textSize="15sp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/logout"
         />
     <Button
         android:layout_width="wrap_content"
